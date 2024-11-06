@@ -82,6 +82,13 @@ nav a:hover {
     animation: highlightFade 1s ease-in-out;
 }
 
+.highlight-alt {
+    background-color: rgba(245, 240, 243, 0.5);
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    animation: highlightFade 1s ease-in-out;
+}
+
 /* Keyframes for Fade-in Animation */
 @keyframes highlightFade {
     from { background-color: transparent; }
