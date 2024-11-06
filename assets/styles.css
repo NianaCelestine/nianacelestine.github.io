@@ -7,10 +7,15 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     background-color: #fafafa;
     line-height: 1.6;
+}
+
+/* Apply Playfair Display to headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 /* Navigation Bar */
@@ -50,7 +55,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     color: #fff;
-    background-image: url("assets/background2.jpg"); /* Background image path */
+    background-image: url("assets/background2.png"); /* Background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
