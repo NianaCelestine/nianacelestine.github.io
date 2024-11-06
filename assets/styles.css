@@ -1,0 +1,137 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d16ba5; /* Soft pink for hover effect */
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f6d6d6, #f7e1e1);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #d16ba5;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    background-color: #d16ba5;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #c0507b;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #d16ba5;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects and Skills */
+.project, #skills ul {
+    margin-top: 1rem;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#skills li {
+    background-color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1rem;
+}
+
+#contact a {
+    color: #d16ba5;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #c0507b;
+}
+
+/* Footer */
+footer {
+    background: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
