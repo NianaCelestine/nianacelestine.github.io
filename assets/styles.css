@@ -1,18 +1,21 @@
-/* Hero Section with Background Image */
+/* Hero Section with Background Image and Overlay */
 #hero {
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("assets/background2.jpg"); /* Path to your image */
-    background-size: cover;        /* Makes sure the image covers the entire section */
-    background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents tiling of the image */
-    color: #fff;                   /* Ensures text is visible on top of the image */
     text-align: center;
+    color: #fff;
+    background-image: url("assets/background2.jpg"); /* Background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 2rem;
+    overflow: hidden;
 }
-/* Add overlay effect */
+
+/* Overlay for Better Text Visibility */
 #hero::before {
     content: "";
     position: absolute;
@@ -20,94 +23,72 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay; adjust opacity as needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay; adjust opacity if needed */
     z-index: 1;
 }
 
+/* Hero Content Styling */
 .hero-content {
     position: relative;
     z-index: 2;
-}
-
-
-.hero-content {
-    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in animation */
 }
 
-/* Hero Image Styling */
+/* Profile Image Styling */
 .hero-image {
-    width: 200px; /* Adjust size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image circular */
+    width: 180px;                   /* Profile image size */
+    height: 180px;
+    border-radius: 50%;             /* Makes the image circular */
     object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 5px solid #fff;         /* Adds a white border around the image */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    margin-bottom: 1.5rem;
+    animation: slideUp 1.5s ease;   /* Slide-up animation */
 }
 
 /* Hero Text Styling */
 .hero-content h1 {
     font-size: 2.5rem;
-    color: #d16ba5;
-    margin-top: 0.5rem;
+    color: #f5f5f7;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 2s ease;      /* Fade-in animation */
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #555;
-    margin-top: 0.5rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2.5s ease;    /* Delayed fade-in animation */
 }
 
+/* Button Styling with Hover Effect */
 .hero-button {
     display: inline-block;
-    margin-top: 1rem;
     padding: 0.8rem 2rem;
     color: #fff;
-    background-color: #d16ba5;
+    background-color: #d16ba5;      /* Button color */
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 3s ease;      /* Delayed fade-in animation */
 }
 
 .hero-button:hover {
     background-color: #c0507b;
+    transform: translateY(-3px);    /* Subtle lift on hover */
 }
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-@keyframes slideIn {
-    from { transform: translateX(-50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-/* Apply Animations */
-.hero-image {
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero-content h1, .hero-content p {
-    animation: slideIn 1.5s ease forwards;
-}
-
-.hero-button {
-    animation: fadeIn 3s ease;
-}
-@media (max-width: 768px) {
-    .hero-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
