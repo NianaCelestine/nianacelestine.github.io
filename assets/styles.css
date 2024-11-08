@@ -95,7 +95,6 @@ nav a:hover {
     to { background-color: rgba(209, 107, 165, 0.5); }
 }
 
-
 .hero-content {
     position: relative;
     z-index: 2;
@@ -116,11 +115,6 @@ nav a:hover {
     animation: slideUp 1.5s ease;
 }
 
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
@@ -131,7 +125,6 @@ nav a:hover {
     border-radius: 5px;
     animation: slideIn 1s ease; /* Apply slide-in animation */
 }
-
 
 .hero-content p {
     font-size: 1.2rem;
@@ -156,72 +149,13 @@ nav a:hover {
     background-color: #c0507b;
     transform: translateY(-3px);
 }
-/* ------------------------------------------------------------------------------------*/
+
 /* About Section */
 #about {
     padding: 4rem 1.5rem;
     text-align: center;
     background-color: #f7f7f7;
 }
-
-#about h2 {
-    font-size: 2rem;
-    color: #5c4e56;
-    margin-bottom: 1rem;
-}
-
-#about p {
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-/* ------------------------------------------------------------------------------------*/
-/* Education Section */
-#education {
-    padding: 4rem 1.5rem;
-    text-align: center;
-    background-color: #f5f0f3;
-}
-
-#education h2 {
-    font-size: 2rem;
-    color: #5c4e56;
-    margin-bottom: 1rem;
-}
-
-.education {
-    margin-top: 1.5rem;
-    max-width: 600px;
-    margin: 1.5rem auto;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.education h3 {
-    color: #333;
-    font-size: 1.3rem;
-}
-
-.education p {
-    color: #555;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.education a {
-    color: #d16ba5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.education a:hover {
-    color: #c0507b;
-}
-/* ------------------------------------------------------------------------------------*/
 
 /* Projects Section */
 #projects {
@@ -230,60 +164,14 @@ nav a:hover {
     background-color: #fafafa;
 }
 
-#projects h2 {
-    font-size: 2rem;
-    color: #5c4e56;
-    margin-bottom: 1rem;
-}
-
-.project {
-    margin-top: 1.5rem;
-    max-width: 600px;
-    margin: 1.5rem auto;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-    color: #333;
-    font-size: 1.3rem;
-}
-
-.project p {
-    color: #555;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.project a {
-    color: #d16ba5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project a:hover {
-    color: #c0507b;
-}
-/* ------------------------------------------------------------------------------------*/
-
-/* Skills Section Styling */
+/* Skills Section */
 #skills {
     padding: 4rem 1.5rem;
     background-color: #fafafa;
-    max-width: 1000px; /* Expand width */
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-#skills h2 {
-    font-size: 2rem;
-    color: #5c4e56;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* Collapsible Item for Side-by-Side Layout */
 .skills-list {
     display: flex;
     flex-direction: column;
@@ -292,7 +180,7 @@ nav a:hover {
 
 .collapsible-item {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start;
     border-bottom: 1px solid #e0e0e0;
     padding: 1rem 0;
 }
@@ -301,7 +189,7 @@ nav a:hover {
     font-size: 1.2rem;
     color: #333;
     cursor: pointer;
-    width: 30%; /* Set fixed width for headers */
+    width: 30%;
     padding-right: 1rem;
     font-weight: bold;
     transition: color 0.3s;
@@ -312,8 +200,8 @@ nav a:hover {
 }
 
 .collapsible-content {
-    display: none; /* Hidden by default */
-    width: 70%; /* Expand content area */
+    display: none;
+    width: 70%;
 }
 
 .collapsible-content ul {
@@ -328,8 +216,6 @@ nav a:hover {
     padding: 0.3rem 0;
 }
 
-
-/* ------------------------------------------------------------------------------------*/
 /* Contact Section */
 #contact {
     padding: 4rem 1.5rem;
@@ -337,29 +223,6 @@ nav a:hover {
     background-color: #fafafa;
 }
 
-#contact h2 {
-    font-size: 2rem;
-    color: #5c4e56;
-    margin-bottom: 1rem;
-}
-
-#contact p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact a {
-    color: #d16ba5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    color: #c0507b;
-}
-/* ------------------------------------------------------------------------------------*/
 /* Footer */
 footer {
     background: #f1f1f1;
@@ -373,9 +236,9 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
 
-    
-}@keyframes slideUp {
+@keyframes slideUp {
     from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
