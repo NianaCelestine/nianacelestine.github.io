@@ -329,11 +329,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .skills-list {
+    .skills-list, .side-by-side-container {
         flex-direction: column;
     }
-
-    .collapsible-item {
-        flex: 1 1 100%;
+    
+    .collapsible-item, .side-by-side-container section {
+        flex: 1 1 100%; /* Full width on smaller screens */
     }
 }
+
