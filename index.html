@@ -44,7 +44,7 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>My journey in technology has been fueled by a passion for innovation, a desire to make a lasting impact, and a diverse background that encompasses computer science, marketing, and the arts.  
+        <p> My journey in technology has been fueled by a passion for innovation, a desire to make a lasting impact, and a diverse background that encompasses computer science, marketing, and the arts.  
             From early encouragement by my father, who noticed my childhood fascination with computers, to the inspiring legacy of figures like Hedy Lamarr, who defied expectations to become a pioneering 
             inventor, my path has been shaped by a diverse array of influences.  I've collaborated with cross-cultural teams to implement cutting-edge automation solutions, led initiatives to improve 
             business processes, and championed diversity and inclusion as a co-leader of the Women in Technology ERG.  Driven by a commitment to excellence and a belief in the transformative power of 
@@ -192,5 +192,12 @@
         <p>© Niana Celestine 2024</p>
     </footer>
 </body>
-
+<script>
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('expanded');
+            });
+        });
+    </script>
 </html>
