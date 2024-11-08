@@ -1,8 +1,14 @@
-// Select all strong elements within the skills list
-document.querySelectorAll('.skills-list > li > strong').forEach(header => {
+// Select all collapsible headers
+document.querySelectorAll('.collapsible-header').forEach(header => {
     header.addEventListener('click', () => {
-        // Toggle the 'active' class on the parent <li> to show/hide the content
-        const listItem = header.parentElement;
-        listItem.classList.toggle('active');
+        // Get the associated content section
+        const content = header.nextElementSibling;
+        
+        // Toggle display
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
     });
 });
