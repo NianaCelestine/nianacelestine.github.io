@@ -224,13 +224,13 @@ nav a:hover {
 }
 
 /* Links in Projects */
-.project a {
+.project a, .contact a {
     color: #d16ba5;
     text-decoration: none;
     font-weight: bold;
 }
 
-.project a:hover {
+.project a:hover, .contact a:hover {
     color: #c0507b;
 }
 
