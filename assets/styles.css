@@ -267,6 +267,7 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Style for the Collapsible Header */
 .collapsible-header {
     font-size: 1.2rem;
@@ -290,15 +291,20 @@ nav a:hover {
     list-style: none;
 }
 
-.collapsible-content.expanded {
-    max-height: 500px; /* Adjust as necessary to fit the content */
-}
+
+
 
 .collapsible-content li {
     font-size: 1rem;
     color: #555;
     padding: 0.3rem 0;
 }
+
+.collapsible-content.expanded {
+    max-height: 500px; /* Adjust to fit your content or let JS set it dynamically */
+    overflow: visible;
+}
+
 
 
 /* Contact Section */
