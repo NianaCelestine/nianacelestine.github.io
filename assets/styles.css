@@ -157,13 +157,6 @@ nav a:hover {
     background-color: #f7f7f7;
 }
 
-/* Projects Section */
-#projects {
-    padding: 4rem 1.5rem;
-    text-align: center;
-    background-color: #fafafa;
-}
-
 /* Container for Education and Projects */
 .side-by-side-container {
     display: flex;
