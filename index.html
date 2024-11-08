@@ -28,7 +28,6 @@
     <!-- Hero Section -->
     <section id="hero" style="background-image: url('assets/images/background.png'); height: 100vh; background-size: cover; background-position: center;">
     <div class="hero-content">
-        <div class="hero-content">
             <img src="assets/images/headshot.jpg" alt="" class="hero-image">
             <h1><span class="highlight">Niana Celestine</span></h1>
             <p><span style="font-weight: bold;">Intelligent Automation Manager | ICR & RPA Specialist | Digital Transformation Enthusiast</span></p>
@@ -193,11 +192,19 @@
     </footer>
 </body>
 <script>
-        document.querySelectorAll('.collapsible-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                content.classList.toggle('expanded');
-            });
-        });
+document.querySelectorAll('.collapsible-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('expanded');
+
+        // Set max-height based on whether it's expanded or not
+        if (content.classList.contains('expanded')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
+    });
+});
+
     </script>
 </html>
