@@ -201,7 +201,8 @@ nav a:hover {
 
 .collapsible-content {
     display: none;
-    width: 70%;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .collapsible-content ul {
