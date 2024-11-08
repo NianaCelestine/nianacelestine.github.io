@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 /* Apply Playfair Display to headings */
-h1, h2, h3, .collapsible-header, .side-by-side-container h2 {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -43,10 +43,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #d16ba5;
+    color: #d16ba5; /* Soft pink for hover effect */
 }
 
-/* Hero Section */
+/* Hero Section with Background Image and Overlay */
 #hero {
     position: relative;
     height: 100vh;
@@ -55,9 +55,9 @@ nav a:hover {
     align-items: center;
     text-align: center;
     color: #fff;
-    background-image: url("assets/background2.png");
+    background-image: url("assets/background2.png"); /* Background image path */
     background-size: cover;
-    background-color: #f5f5f7;
+    background-color: #f5f5f7; /* Light fallback color */
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem;
@@ -71,8 +71,28 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.5); /* Overlay */
     z-index: 1;
+}
+
+.highlight {
+    background-color: rgba(209, 107, 165, 0.5);
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    animation: highlightFade 1s ease-in-out;
+}
+
+.highlight-alt {
+    background-color: rgba(245, 240, 243, 0.5);
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    animation: highlightFade 1s ease-in-out;
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes highlightFade {
+    from { background-color: transparent; }
+    to { background-color: rgba(209, 107, 165, 0.5); }
 }
 
 .hero-content {
@@ -83,15 +103,6 @@ nav a:hover {
     align-items: center;
     animation: fadeIn 1.5s ease-in-out;
 }
-
-/* Highlighted Text */
-.highlight, .highlight-alt {
-    padding: 0.1rem 0.2rem;
-    border-radius: 3px;
-    animation: highlightFade 1s ease-in-out;
-}
-.highlight { background-color: rgba(209, 107, 165, 0.5); }
-.highlight-alt { background-color: rgba(245, 240, 243, 0.5); }
 
 .hero-image {
     width: 200px;
@@ -105,19 +116,26 @@ nav a:hover {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.0rem;
     color: #ffffff;
-    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    animation: slideIn 1s ease; /* Apply slide-in animation */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     color: #3e423f;
     margin-bottom: 1.5rem;
-    max-width: 800px;
+    animation: fadeIn 2.5s ease;
+    max-width: 1200px;
 }
 
 .hero-button {
+    display: inline-block;
     padding: 0.8rem 2rem;
     color: #fff;
     background-color: #8f8189;
@@ -125,6 +143,7 @@ nav a:hover {
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 3s ease;
 }
 
 .hero-button:hover {
@@ -135,7 +154,7 @@ nav a:hover {
 /* About Section */
 #about {
     width: 100%;
-    background-color: #f7f7f7;
+    background-color: #f7f7f7; /* Background color for the full-width effect */
     padding: 4rem 1.5rem;
     display: flex;
     justify-content: center;
@@ -146,38 +165,75 @@ nav a:hover {
     font-size: 2rem;
     color: #5c4e56;
     margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%; /* Ensures the title spans the width of the content */
 }
 
 #about p {
-    max-width: 800px;
+    max-width: 1200px; /* Centers content with max-width */
     width: 100%;
     color: #555;
     font-size: 1.1rem;
     line-height: 1.6;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-/* Side-by-Side Layout */
+/* Container for Education and Projects */
 .side-by-side-container {
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 2rem; /* Space between sections */
     padding: 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Individual Section Styling */
 .side-by-side-container section {
-    flex: 1;
+    flex: 1; /* Allows each section to take up equal space */
     padding: 1rem;
     background-color: #fafafa;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Headings */
 .side-by-side-container h2 {
     font-size: 1.8rem;
     color: #5c4e56;
     margin-bottom: 1rem;
+    text-align: center;
 }
+
+/* Content Styling for Education and Projects */
+.education, .project {
+    margin-top: 1rem;
+}
+
+.education h3, .project h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.education p, .project p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Links in Projects */
+.project a {
+    color: #d16ba5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #c0507b;
+}
+
 
 /* Skills Section */
 #skills {
@@ -194,7 +250,7 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-/* Flexbox for Skills Layout */
+/* Flexbox Layout for Main Headings */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -202,30 +258,82 @@ nav a:hover {
     justify-content: space-between;
 }
 
-/* Collapsible Item Styling */
+/* Each collapsible item should take up a consistent space */
 .collapsible-item {
-    flex: 1 1 45%;
+    flex: 1 1 45%; /* Adjusts to 45% width for two columns */
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Style for the Collapsible Header */
 .collapsible-header {
     font-size: 1.2rem;
     color: #333;
     cursor: pointer;
     font-weight: bold;
-    margin-bottom: 0.5rem;
     transition: color 0.3s;
+    margin-bottom: 0.5rem;
 }
 
 .collapsible-header:hover {
     color: #d16ba5;
 }
 
+/* Collapsible Content Styling */
 .collapsible-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    padding-left: 1rem
+    padding-left: 1rem;
+    list-style: none;
+}
+
+.collapsible-content.expanded {
+    max-height: 500px; /* Adjust as necessary to fit the content */
+}
+
+.collapsible-content li {
+    font-size: 1rem;
+    color: #555;
+    padding: 0.3rem 0;
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 4rem 1.5rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+/* Footer */
+footer {
+    background: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .collapsible-item {
+        flex: 1 1 100%;
+    }
+}
