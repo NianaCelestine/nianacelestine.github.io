@@ -131,6 +131,7 @@ nav a:hover {
     color: #3e423f;
     margin-bottom: 1.5rem;
     animation: fadeIn 2.5s ease;
+    max-width: 1200px;
 }
 
 .hero-button {
@@ -152,11 +153,24 @@ nav a:hover {
 
 /* About Section */
 #about {
-    padding: 4rem 1.5rem;
-    text-align: center;
+    width: 100%;
     background-color: #f7f7f7;
-    width: 100%
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: center;
 }
+
+#about p {
+    max-width: 1200px;
+    width: 100%;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 
 
 /* Container for Education and Projects */
